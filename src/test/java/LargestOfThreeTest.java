@@ -41,6 +41,7 @@ public class LargestOfThreeTest {
         LargestOfThree largestOfThree = new LargestOfThree(10.0f,3.0f,15.0f);
         Assert.assertEquals(15.0f, largestOfThree.getMaximum());
     }
+
     @Test
     public void givenThreeStrings_IfProper_returnFirstMaximum() {
         LargestOfThree largestOfThree = new LargestOfThree("Peach","Apple","Banana");
@@ -57,5 +58,11 @@ public class LargestOfThreeTest {
     public void givenThreeStrings_IfProper_returnThirdtMaximum() {
         LargestOfThree largestOfThree = new LargestOfThree("Apple","Banana","Peach");
         Assert.assertEquals("Peach", largestOfThree.getMaximum());
+    }
+
+    @Test
+    public void givenFiveElements_IfProper_ReturnMaxValue() {
+        LargestOfThree largestOfThree=new LargestOfThree();
+        Assert.assertEquals(60,largestOfThree.getMaximum(15,12,3,4,5,60,26));
     }
 }
