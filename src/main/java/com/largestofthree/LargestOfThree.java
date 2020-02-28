@@ -1,17 +1,33 @@
 package com.largestofthree;
 
-public class LargestOfThree {
+public class LargestOfThree<E extends Comparable<E>>
+{
+    E v3;
+    E v1;
+    E v2;
 
-    public <E extends Comparable> E getMaximum(E num1, E num2, E num3) {
-        E max=num1;
-        if(num2.compareTo(max)>0)
+    public LargestOfThree( E v1, E v2, E v3) {
+        this.v1=v1;
+        this.v2=v2;
+        this.v3=v3;
+    }
+
+    public E getMaximum()
+    {
+        return  getMaximum(v1, v2, v3);
+    }
+
+    public <E extends Comparable<E>> E getMaximum(E v1, E v2, E v3) {
+        E max=v1;
+        if(v2.compareTo(max)>0)
         {
-            max=num2;
+            max=v2;
         }
-        if(num3.compareTo(max)>0)
+        if(v3.compareTo(max)>0)
         {
-            max=num3;
+            max=v3;
         }
         return max;
     }
+
 }
