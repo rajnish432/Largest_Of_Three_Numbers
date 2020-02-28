@@ -2,7 +2,7 @@ package com.largestofthree;
 
 public class LargestOfThree {
 
-    public int getMaximum(Integer num1, Integer num2, Integer num3) {
+    public Integer getMaximum(Integer num1, Integer num2, Integer num3) {
         Integer max=num1;
         if(num2.compareTo(max)>0)
         {
@@ -15,7 +15,7 @@ public class LargestOfThree {
         return max;
     }
 
-    public float getFloatMaximum(Float n1,Float n2,Float n3) {
+    public Float getFloatMaximum(Float n1,Float n2,Float n3) {
         Float max=n1;
         if(n2.compareTo(max)>0)
         {
@@ -28,4 +28,16 @@ public class LargestOfThree {
         return max;
     }
 
+    public String getStringMaximum(String a,String b,String c) {
+        String max=a;
+        if (b.compareTo(max)>0)
+        {
+            max=b;
+        }
+        if (c.compareTo(max)>0)
+        {
+            max=c;
+        }
+        return max;
+    }
 }

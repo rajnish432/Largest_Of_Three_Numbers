@@ -25,19 +25,36 @@ public class LargestOfThreeTest {
 
     @Test
     public void givenThreeFloatValues_IfProper_returnFirstMaximum() {
-        int result= (int) largestOfThree.getFloatMaximum(15.0f,10.0f,3.0f);
-        Assert.assertEquals(15,result);
+        float result= largestOfThree.getFloatMaximum(15.0f,10.0f,3.0f);
+        Assert.assertEquals(15.0f,result,0.0);
     }
 
     @Test
     public void givenThreeFloatValues_IfProper_returnSecondMaximum() {
-        int result= (int) largestOfThree.getFloatMaximum(10.0f,15.0f,3.0f);
-        Assert.assertEquals(15,result);
+        float result= largestOfThree.getFloatMaximum(10.0f,15.0f,3.0f);
+        Assert.assertEquals(15.0f,result,0.0);
     }
 
     @Test
     public void givenThreeFloatValues_IfProper_returnThirdMaximum() {
-        int result= (int) largestOfThree.getFloatMaximum(3.0f,10.0f,15.0f);
-        Assert.assertEquals(15,result);
+        float result= largestOfThree.getFloatMaximum(3.0f,10.0f,15.0f);
+        Assert.assertEquals(15,result,0.0);
+    }
+    @Test
+    public void givenThreeStrings_IfProper_returnFirstMaximum() {
+        String result=largestOfThree.getStringMaximum("Peach","Apple","Banana");
+        Assert.assertEquals("Peach",result);
+    }
+
+    @Test
+    public void givenThreeStrings_IfProper_returnSecondMaximum() {
+        String result=largestOfThree.getStringMaximum("Apple","Peach","Banana");
+        Assert.assertEquals("Peach",result);
+    }
+
+    @Test
+    public void givenThreeStrings_IfProper_returnThirdtMaximum() {
+        String result=largestOfThree.getStringMaximum("Apple","Banana","Peach");
+        Assert.assertEquals("Peach",result);
     }
 }
