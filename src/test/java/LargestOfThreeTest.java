@@ -22,4 +22,22 @@ public class LargestOfThreeTest {
         int result = largestOfThree.getMaximum(10, 3, 15);
         Assert.assertEquals(15, result);
     }
+
+    @Test
+    public void givenThreeFloatValues_IfProper_returnFirstMaximum() {
+        int result= (int) largestOfThree.getFloatMaximum(15.0f,10.0f,3.0f);
+        Assert.assertEquals(15,result);
+    }
+
+    @Test
+    public void givenThreeFloatValues_IfProper_returnSecondMaximum() {
+        int result= (int) largestOfThree.getFloatMaximum(10.0f,15.0f,3.0f);
+        Assert.assertEquals(15,result);
+    }
+
+    @Test
+    public void givenThreeFloatValues_IfProper_returnThirdMaximum() {
+        int result= (int) largestOfThree.getFloatMaximum(3.0f,10.0f,15.0f);
+        Assert.assertEquals(15,result);
+    }
 }

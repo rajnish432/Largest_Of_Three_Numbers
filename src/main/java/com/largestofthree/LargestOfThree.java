@@ -9,6 +9,12 @@ public class LargestOfThree {
         Integer num1=0;
         Integer num2 =0;
         Integer num3=0;
+        //Float Objects
+        Float n1= 0.0f;
+        Float n2= 0.0f;
+        Float n3= 0.0f;
+
+        largestOfThree.getFloatMaximum(n1,n2,n3);
         largestOfThree.getMaximum(num1,num2,num3);
     }
 
@@ -21,6 +27,19 @@ public class LargestOfThree {
         if(num3.compareTo(max)>0)
         {
             max=num3;
+        }
+        return max;
+    }
+
+    public float getFloatMaximum(Float n1,Float n2,Float n3) {
+        Float max=n1;
+        if(n2.compareTo(max)>0)
+        {
+            max=n2;
+        }
+        if (n3.compareTo(max)>0)
+        {
+            max=n3;
         }
         return max;
     }
