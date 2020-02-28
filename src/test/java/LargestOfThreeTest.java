@@ -20,5 +20,6 @@ public class LargestOfThreeTest {
     public void givenThreeNumber_IfProper_returnThirdMaximum() {
         int result=largestOfThree.getMaximum(10,3,15);
         Assert.assertEquals(15,result);
+
     }
 }
