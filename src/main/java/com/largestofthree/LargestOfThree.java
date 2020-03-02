@@ -1,5 +1,6 @@
 package com.largestofthree;
 
+import java.sql.SQLOutput;
 import java.util.Arrays;
 import java.util.Collections;
 
@@ -41,6 +42,11 @@ public class LargestOfThree<E extends Comparable<E>>
             Arrays.sort(params, Collections.reverseOrder());
             max=params[0];
         }
+        printMax(max);
         return max;
+    }
+
+    private <E extends Comparable<E>> void printMax(E max) {
+        System.out.println(max);
     }
 }
